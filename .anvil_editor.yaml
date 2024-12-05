@@ -1,8 +1,11 @@
 unique_ids:
   assets:
+    2024-12-05_Logo.jpg: '1733382708026221831193381.4785'
+    2024-12-05_logo_3.jpeg: '1733383332437918981244863.5002'
     theme.css: 6G44GIEQQRJLILWU6GQSQO5BTDFT5ZI3
   forms:
     Form1: '173337843258241791970378.82232'
+    Form2: '1733383062652946577564083.859'
   modules: {}
   scripts: {}
   server_modules: {}
