@@ -25,13 +25,6 @@ class Form1(Form1Template):
   def click(self, **event_args):
     val = event_args['sender'].tag.name
     if val == '=':
-      '''
-      security: evoid arbutrary python code execution 
-      import ast
-      self.text_box_1.text = ast.literal_eval(self.text_box_1.text)
-      ___
-      NotImplementedImportError: ast is not yet implemented in Skulpt
-      '''
       self.text_box_1.text = eval(self.text_box_1.text)
     elif val == 'c':
       self.text_box_1.text = ''
