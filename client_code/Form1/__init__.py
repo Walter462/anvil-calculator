@@ -12,15 +12,21 @@ class Form1(Form1Template):
             "9", "0", ".", "*", "/", "="  ]
     self.btn = {}
     gp = GridPanel()
-    for i in chars:
+    for idx, i in enumerate(chars):
+      if idx < 6:
+        row = 'A'
+      elif 6 <= idx < 12:
+        row = 'B'
+      else:
+        row = 'C'
       self.btn[i] = Button(text=i)
       self.btn[i].tag.name = i
       self.btn[i].set_event_handler('click', self.click)
       gp.add_component(self.btn[i], 
-                      row = 'A', 
+                      row = row, 
                       col_xs=3,
                       width_xs=1)
-    self.add_component(gp)
+    self.add_component(gp) 
   def click(self, **event_args):
     val = event_args['sender'].tag.name
     if val == '=':
