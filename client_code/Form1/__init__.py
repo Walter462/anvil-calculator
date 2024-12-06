@@ -1,5 +1,4 @@
 from ._anvil_designer import Form1Template
-import ast
 from anvil import *
 
 class Form1(Form1Template):
@@ -25,6 +24,7 @@ class Form1(Form1Template):
   def click(self, **event_args):
     val = event_args['sender'].tag.name
     if val == '=':
+#  | OPTIMIZE: security: server side->eval()->ast.eval_literal( ) | File: KnowlegeBase/IT/Development/DataDrivenApps/Anvil/Tutorials/Calculator | ID: 1733467220 |
       self.text_box_1.text = eval(self.text_box_1.text)
     elif val == 'c':
       self.text_box_1.text = ''
