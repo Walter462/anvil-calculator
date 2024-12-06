@@ -23,5 +23,5 @@ class Form1(Form1Template):
                       width_xs=1)
     self.add_component(gp)
 
-def click(self, **event_args):
-  print(event_args['sender'].tag.name)
+  def click(self, **event_args):
+    print(event_args['sender'].tag.name)
