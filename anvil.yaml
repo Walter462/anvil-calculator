@@ -4,9 +4,9 @@ dependencies:
   dep_id: dep_lin1x4oec0ytd
   resolution_hints: {app_id: 4UK6WHQ6UX7AKELK, name: Material 3 Theme, package_name: m3}
   version: {version_tag: v1.2.1}
-name: Anvil-calculator
+name: anvil-calculator
 native_deps: null
-package_name: Anvil_calculator
+package_name: anvil_calculator
 runtime_options:
   client_version: '3'
   server_spec: {base: python310-minimal}
