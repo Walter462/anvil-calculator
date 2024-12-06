@@ -28,6 +28,9 @@ class Form1(Form1Template):
       self.text_box_1.text = eval(self.text_box_1.text)
     elif val == 'c':
       self.text_box_1.text = ''
-    self.text_box_1.text += event_args['sender'].tag.name
+    elif val == 'd':
+      self.text_box_1.text = self.text_box_1.text[:-1]
+    else:
+      self.text_box_1.text += val
 
   
