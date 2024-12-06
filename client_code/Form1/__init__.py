@@ -22,6 +22,5 @@ class Form1(Form1Template):
                       col_xs=3,
                       width_xs=1)
     self.add_component(gp)
-
   def click(self, **event_args):
-    print(event_args['sender'].tag.name)
+    self.text_box_1.text += event_args['sender'].tag.name
