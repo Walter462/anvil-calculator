@@ -13,13 +13,26 @@ class Form1(Form1Template):
     self.btn = {}
     gp = GridPanel()
     for idx, i in enumerate(chars):
+      if i == "=":
+        clr = "green"
+      elif i in ["c", "d"]:
+        clr = 'pink'
+      elif i in ["+", "-", "*", "/"]:
+        clr = "3A3A49"
+      else:
+        clr = "#717093"
+        
       if idx < 6:
         row = 'A'
       elif 6 <= idx < 12:
         row = 'B'
       else:
         row = 'C'
-      self.btn[i] = Button(text=i)
+      self.btn[i] = Button(text=i, 
+                           font = 'Consolas',
+                          bold = True,
+                          foreground="#FFF",
+                          background = clr)
       self.btn[i].tag.name = i
       self.btn[i].set_event_handler('click', self.click)
       gp.add_component(self.btn[i], 
