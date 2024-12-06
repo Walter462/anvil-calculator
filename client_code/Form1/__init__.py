@@ -15,8 +15,13 @@ class Form1(Form1Template):
     gp = GridPanel()
     for i in chars:
       self.btn[i] = Button(text=i)
+      self.btn[i].tag.name = i
+      self.btn[i].set_event_handler('click', self.click)
       gp.add_component(self.btn[i], 
                       row = 'A', 
                       col_xs=3,
                       width_xs=1)
     self.add_component(gp)
+
+def click(self, **event_args):
+  print(event_args['sender'].tag.name)
